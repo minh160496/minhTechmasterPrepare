@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Van Minh prepare day6</title>
+    <!--phan link cdn icon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- phan cdn google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- link favicon icon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+
+    <!-- phan link file css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="app">
+        <main id="main">
+            <h1>Day 6: Tìm hiểu về table, form, css transition, css animation, css transform</h1>
+
+            <section class="main__item table">
+                <h2>I. Tìm hiểu về thẻ <code>table</code></h2>
+                <div class="main__item__content">
+                    <div class="content__item">
+                        <h3>Khái niệm</h3>
+                        <p>Là cấu trúc dạng hàng và cột, giúp tra cứu thông tin thuận lọi</p>
+                    </div>
+
+                    <div class="content__item">
+                        <h3>Các trường hợp không nên dùng bảng</h3>
+                        <ul>
+                            <li>Đối tượng dùng web là người khiếm thị</li>
+                            <li>Chia layout trang web</li>
+                            <li>Responsive web</li>
+                        </ul>
+                    </div>
+
+                    <div class="content__item">
+                        <h3>Các tạo bảng</h3>
+                        <div class="row">
+                            <ul>
+                                <li>Nằm trong cặp thẻ <code>table</code></li>
+                                <li>Có phần <code>thead</code> và <code>tbody</code></li>
+                                <li><code>tr</code> bắt đầu một hàng, trong <code>tr</code> có <code>td</code> là một ô
+                                    hoặc
+                                    <code>th</code> là một ô tiêu đề
+                                </li>
+                                <li>Sử dụng attribute <code>rowspan</code> để xác định số hàng mà một <code>td</code>
+                                    chiếm
+                                </li>
+                                <li>Sử dụng attribute <code>colspan</code> để xác định số cột mà một <code>td</code>
+                                    chiếm
+                                </li>
+                                <li>
+                                    <p> 4. Thuộc tính css thường xuyên sử dụng với <code>table</code></p>
+                                    <code>table {border-collapse = colapse;}</code>
+                                </li>
+                            </ul>
+                            <img src="./assets/img/table.png" alt="image">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main__item form">
+                <h2>II. Tìm hiểu về HTML <code>form</code></h2>
+                <div class="main__item__content">
+                    <div class="content__item">
+                        <h3>Cấu trúc</h3>
+                        <p>Nằm trong cặp thẻ <code>form</code></p>
+                        <h3>Modul</h3>
+                        <ul>
+                            <li>Form control là thành phần cho phép người dùng nhập dữ liệu, đó có thể là
+                                <code>input, select, textarea or button</code>
+                            </li>
+                            <li>Form fiel dùng để tham chiếu tới form control
+
+                                Vd: <code>input</code> or <code> textarea</code> </li>
+                        </ul>
+                    </div>
+                    <div class="content__item">
+                        <div class="row">
+                            <div>
+                                <h3>Sử dụng form khi nào</h3>
+                                <ol>
+                                    <li>
+                                        <h4>Lấy dữ liệu người dùng</h4>
+                                    </li>
+                                    <li>
+                                        <h4>Hỗ trợ người dùng nhập dữ liệu</h4>
+                                        <ul>
+                                            <li>
+                                                Sử dụng <code>label for</code> chỏ đến <code>input</code> để người dùng
+                                                nhập
+                                            </li>
+                                            <li>
+                                                Muốn nhập nhiều dòng văn bản thì thay <code>input</code> sử dụng
+                                                <code>textarea</code>
+                                            </li>
+                                            <li>
+                                                Muốn người dùng lựa chọn thì sử dụng thẻ <code>select</code> bao ngoài
+                                                các cặp
+                                                thẻ <code>opition</code>
+                                            </li>
+                                            <li>
+                                                Nhóm các form control: sử dụng trong cặp thẻ <code>fieldset</code>
+                                            </li>
+                                            <li>
+                                                Gửi form, sử dụng <code>input type:”submit”</code>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <Sử> Để người dùng không phải nhập lại trong biểu mẫu, sử dụng auto fill sử dụng
+                                            <i>attribute</i> <code>type</code>, <code>name</code> và <code>id</code></p>
+                                    </li>
+                                    <li>
+                                        <p>Để người dùng nhập đúng kiểu data sử dụng <i>attribute</i>
+                                            <code>required </code>
+                                            trước <code>type</code>, <code>id</code>, <code>name</code>
+                                        </p>
+                                    </li>
+                                </ol>
+                            </div>
+                            <form>
+                                <div class="form__item">
+                                    <label for="name">Your name</label>
+                                    <input type="text" id="name" name="name">
+                                </div>
+                                <div class="form__item">
+                                    <label for="email">Your email</label>
+                                    <input placeholder="email@gmai.com" type="email" name="email" id="email">
+                                </div>
+                                <div class="form__item">
+                                    <label for="comment">Your comment</label>
+                                    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                                </div>
+                                <button style="float: right; cursor: pointer; padding: 6px 4px;"
+                                    type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main__item css-transtion">
+                <h2>III. Tìm hiểu về css <code>transition</code></h2>
+                <div class="main__item__content">
+                    <div class="content__item">
+                        <ol>
+                            <li>Tác dụng thay đổi thuộc tính CSS trong một thời gian nhất định</li>
+                            <li>
+                                <h3>Các thành phần</h3>
+                                <ul>
+                                    <li><code>transition</code></li>
+                                    <li><code>transition-delay</code></li>
+                                    <li><code>transition-duration</code></li>
+                                    <li><code>transition-property</code></li>
+                                    <li><code>transition-timing-function</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div>
+                                        <h3>Cách sử dụng</h3>
+                                        <code>div {Transition: transition-propert transition-duration transition-timing-function transition-delay;}</code>
+                                        <p>Ex</p>
+                                        <p><code>div {transition: width 2s linear 1s;}</code></p>
+                                    </div>
+                                    <div class="ex--transition">
+                                        <div>
+                                            <h5>Hover me to see transition</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main__item css-animation">
+
+            </section>
+
+            <section class="main__item css-transform">
+                <h2>IV. Tìm hiểu về css <code>transform</code></h2>
+                <div class="main__item__content">
+                    <ol>
+                        <li>
+                            <h3>Tác dụng</h3>
+                            <p>Thuộc tính CSS biến đổi cho phép bạn dịch chuyển, xoay, chia tỷ lệ, nghiêng hoặc dịch một
+                                phần tử. Nó sửa đổi không gian tọa độ của mô hình định dạng trực quan CSS</p>
+                        </li>
+                        <li>
+                            <h3>Các giá trị cơ bản</h3>
+                            <div class="row">
+                                <div>
+                                    <ul>
+                                        <li><code>Translate</code></li>
+                                        <li><code>Rotate</code></li>
+                                        <li><code>Scale</code></li>
+                                        <li><code>Matrix</code></li>
+                                    </ul>
+                                </div>
+                                <div class="ex--transform">
+                                    <div>
+                                        <h4>Hover me to transform rotate</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="main__item css-transform">
+                <h2>V. Tìm hiểu về css <code>animation</code></h2>
+                <div class="main__item__content">
+                    <ol>
+                        <li>
+                            <h3>Tác dụng</h3>
+                            <p>Tạo ra các hiệu ứng hoạt cảnh</p>
+                        </li>
+                        <li>
+                            <p>Để tạo ra aimation cần gán cơ chế hoạt động cho nó, bằng cách sử dụng
+                                <code>@keyframes</code>
+                            </p>
+                            <img src="./assets/img/animation.svg" alt="image"> <br>
+                            <code>@keyframes my-animation { <br>
+                                from {<br>
+                                    opacity: 0;<br>
+                                } <br>
+                                to { <br>
+                                    transform: scale(1.4); <br>
+                                    opacity: 0.5; <br>
+                                } <br>
+                            }</code>
+                        </li>
+                        <li>
+                            <h3>Các giá trị cơ bản</h3>
+                            <div class="row-near">
+                                <div>
+                                    <ul>
+                                        <li><code>animation-name</code></li>
+                                        <li><code>animation-duration</code></li>
+                                        <li><code>animation-delay</code></li>
+                                        <li><code>animation-iteration-count</code></li>
+                                        <li><code>animation-direction</code></li>
+                                        <li><code> animation-timing-function</code></li>
+                                        <li><code>animation-fill-mode</code></li>
+                                    </ul>
+                                </div>
+                                <div class="ex--animation">
+                                    <div>
+                                        <p>Animation</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+<script src="./assets/js/index.js"></script>
+
+</html>
